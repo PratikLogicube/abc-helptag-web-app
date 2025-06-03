@@ -9,7 +9,7 @@ import {
   useForm,
   UseFormReturn,
 } from "react-hook-form";
-import { z, ZodType } from "zod";
+import { ZodType } from "zod";
 
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
@@ -85,12 +85,7 @@ const AuthForm = <T extends FieldValues>({
                 </FormLabel>
                 <FormControl>
                   {field.name === "digitalIdentity" ? (
-                    <ImageUpload
-                      folder="faceId"
-                      placeholder="upload Your ID"
-                      onFileChange={field.onChange}
-                      accept="image/*"
-                    />
+                    <ImageUpload />
                   ) : (
                     <Input
                       required

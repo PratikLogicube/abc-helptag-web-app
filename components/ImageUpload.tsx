@@ -26,21 +26,7 @@ const authenticator = async () => {
   }
 };
 
-interface ImageUploadProps {
-  accept?: string;
-  placeholder: string;
-  folder: string;
-  value?: string;
-  onFileChange: (filePath: string) => void;
-}
-
-const ImageUpload = ({
-  accept,
-  placeholder,
-  folder,
-  value,
-  onFileChange,
-}: ImageUploadProps) => {
+const ImageUpload = () => {
   return (
     <ImageKitProvider
       urlEndpoint={config.env.imageKit.urlEndpoint}

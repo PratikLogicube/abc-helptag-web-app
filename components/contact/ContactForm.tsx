@@ -78,7 +78,7 @@ const ContactForm = () => {
   });
 
   // Handle form submission
-  const handleSubmit: SubmitHandler<ContactFormData> = async (data) => {
+  const handleSubmit: SubmitHandler<ContactFormData> = async () => {
     // Simulate form submission (replace with actual API call if needed)
     try {
       // Simulate success for now
@@ -90,6 +90,7 @@ const ContactForm = () => {
       toast.error("Error submitting form", {
         description: "An error occurred while sending your message.",
       });
+      console.error("Form submission error:", error);
     }
   };
 
