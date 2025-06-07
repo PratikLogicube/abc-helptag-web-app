@@ -15,7 +15,7 @@ import {
 
 const AuthNavigationBar = () => {
   return (
-    <NavigationMenu viewport={false} className="m-auto mt-10">
+    <NavigationMenu viewport={false} className="m-auto !mt-0 bg-transparent">
       <NavigationMenuList>
         <NavigationMenuItem>
           <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>

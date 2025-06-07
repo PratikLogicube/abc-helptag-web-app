@@ -54,7 +54,7 @@ const components: { title: string; href: string; description: string }[] = [
 
 const NavigationBar = () => {
   return (
-    <NavigationMenu viewport={false} className="m-auto mt-10">
+    <NavigationMenu viewport={false} className="mx-auto">
       <NavigationMenuList>
         <NavigationMenuItem>
           <NavigationMenuTrigger>Home</NavigationMenuTrigger>

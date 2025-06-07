@@ -27,13 +27,16 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
   const session = await auth();
+
   return (
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {session ? <NavigationBar /> : <AuthNavigationBar />}
-        {children}
+        <main className="w-screen h-dvh bg-gradient-to-r from-blue-200 to-cyan-200 p-8">
+          {session ? <NavigationBar /> : <AuthNavigationBar />}
+          {children}
+        </main>
         <Toaster richColors />
       </body>
     </html>
